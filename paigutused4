@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paigutamine 4 - Flex ja semantilised elemendid</title>
+    <script>
+        function myFunction() {
+          alert("I am an alert box!");
+        }
+        </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 60%;
+            margin: auto;
+        }
+
+        footer {
+            background-color: darkslateblue;
+            color: white;
+            padding: 1rem;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgb(190, 100, 72);
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        menu {
+            background-color: rgb(207, 116, 116);
+            border-radius: 20px;
+            padding: 1rem;
+        }
+
+        main {
+            display: flex;
+            background-color: pink;
+            border-radius: 30px;
+            padding: 1rem;
+        }
+
+        /* + vahetult järgnev sama taseme element https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator */
+        h1+p {
+            color: blueviolet;
+        }
+
+        /* ~ sellele järgnev esimene selle taseme element
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator 
+        vahel võib olla midagi muud ka
+        */
+        h1~a {
+            color: pink;
+            font-size: 1.4em;
+        }
+
+        /* > child https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator */
+        main>article {
+            order: 2;
+            min-width: 12em;
+            flex: 1;
+            background-color: floralwhite;
+            padding: 1rem;
+            border-radius: 30px;
+        }
+
+        main>nav {
+            display:flex;
+            order: 1;
+            width: 200px;
+            background-color: coral;
+            padding: 1rem;
+            border-radius: 30px;
+        }
+
+        main>aside, .popover {
+            order: 3;
+            width: 200px;
+            height: 500px;
+            background-color: aquamarine;
+            padding: 1rem;
+            border-radius: 30px;
+        }
+
+        span {
+            background-color: aqua;
+        }
+
+        div>span {
+            background-color: yellow;
+        }
+        .row {
+      display: flex;
+    }
+        .section {
+      flex: 1;
+      height: 330px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color:#6f90aa;
+      border-color:#4335b9;
+      border-style: groove;
+      margin: 3px;
+      color: rgb(0, 0, 0);
+      text-align: center; }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>Kukkmasin AS</p>
+    </header>
+    <menu>
+        <a href="list.html">JOHN</a>
+        <a href="list.html">RACHEL</a>
+        <a href="list.html">9864</a>
+        <a href="list.html">54</a>
+    </menu>
+    <main >
+        <!-- main - peamine sisuosa veebilehel https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main -->
+        <article>
+            <h1>15 korrust, 3 vigastatut</h1>
+
+            <details>
+                <summary>Detailid</summary>
+                Tegid suure vea.
+            </details>
+
+            <section>
+                <h2>Orb</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum dolorum ratione excepturi vero
+                    neque quidem fugiat accusantium! Obcaecati excepturi pariatur soluta nostrum aperiam magnam ullam
+                    nihil fugiat in, aliquid ex.</p>
+            </section>
+
+            <section>
+                <h2>Orbital</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi minus vitae cupiditate quo, sed,
+                    sapiente neque tempore quis, at doloribus pariatur aliquid tenetur suscipit excepturi recusandae
+                    error odio impedit laboriosam.</p>
+                    <p><slot name="my-text">U.F.Orb</slot></p>
+            </section>
+        </article>
+        <article draggable="true" class="" id="" contenteditable="true" data-content="lisatekst (data-misiganes) mida saab cssi ja javascriptida kasutada">
+            <!-- hidden -->
+            <!-- enumerated - tähendab, et sisaldab piiratud hulgal võimlalikke valitavaid väärtuseid nt rtl/ltr või true/false -->
+            <h2 dir="rtl">Gaabrieli nimekiri</h2>
+            <p autocapitalize="">Sisesta kõik andmed. Vale vastuse korral võtab efekti avalik hukkam1ne.</p>
+            
+            <form action="" method="get" class="form-example">
+                <div class="form-row">
+                  <label for="name">Sinu nimi:</label>
+                  <input type="text" name="name" id="name" placeholder="Sinu nimi" required>
+                </div>
+                <div class="form-row" class="error">
+                  <label for="email">Sinu e-mail:</label>
+                  <input type="email" name="email" id="email" placeholder="Sinu email" required>
+                </div>
+                <div class="form-row">
+                  <label for="b-day">Sinu sünnikuupäev:</label>
+                  <input type="date" id="b-day" name="b-day" value="2018-07-22" min="1991-01-02" max="2021-12-31">
+                </div>
+                <div class="form-row">
+                  <label for="phone">Sinu tel nr:</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                  <div class="form-row">
+                    <label for="time">Mis kell tuleb metsa joosta?</label>
+                    <input type="time" name="time" id="time" placeholder="Mis kell sa magama jääd." required>
+                  </div>
+                  <div class="form-row">
+                    <label for="checkbox">John?</label>
+                    <input type="checkbox" name="checkbox" id="checkbox" placeholder="Kas su uks on öösel lukus?" required>
+                  </div>
+            </form>
+            
+        </article>
+        
+        
+    </main>
+    <div class="row">
+        <div class="section">
+            <h1>Hukatav 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam illum, tenetur deserunt a mollitia sed sit vero ipsum veniam dolorum reiciendis odit quod culpa illo at unde ipsam aliquam!</p>
+        </div>
+        <div class="section">
+            <h1>Hukatav 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quia sed consequuntur velit perferendis expedita quibusdam debitis, eveniet tenetur necessitatibus fugiat porro natus eum enim delectus nemo fugit. Doloremque, alias?</p>
+        </div>
+        <div class="section">
+            <h1>Hukatav 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem corrupti consequatur, quos velit atque cupiditate sint debitis fugit tempore fuga voluptate. Iste quibusdam hic consequatur excepturi error dolorum, fugiat tenetur.</p>
+        </div>
+      </div>
+    <footer>Lõpp on lähedal</footer>
+</body>
+
+</html>
