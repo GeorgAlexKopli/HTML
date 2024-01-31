@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
+    <!-- proovi, mis juhtub, kui kirjutad ascii asemel "UTF-8" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        html {
+            font-size: 22px;
+            /* 
+            Default font-size ehk 1 rem on alati 16px kui ei ole mÃ¤Ã¤ratud teisiti; 
+            Seega 1rem = 16px; 2rem = 32px, 2.4rem = 38,4px;
+            kui muudad siin kirja suuruseks nt 12 px, siis 1rem = 12px ja 2rem = 24px;
+            */
+        }
+        body {
+            background: #ededed;
+            font-size: 18px;
+            font-family: 'Inter', Courier, monospace;
+            /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+            font-family: "Inter", 'Times New Roman', Times, serif;
+            font-weight: 100;
+            font-weight: 400;
+            border-color: #B5F1C6;
+            /* oblique - kaldesse pandud regular, italic - fondi failis kursiivis font */
+            /* font-variant: small-caps; */
+            /* font-variant-ligatures: historical-ligatures; */
+            /* font-kerning: normal; */
+            font-stretch: condensed;
+            /* kliki brauseri dev. toolsis neid ridu Ã¼kshaaval sisse-vÃ¤lja ja vaata, mida need teevad*/
+
+        }
+        .em {
+            font-size: 1.2rem;
+            /* proovi, mis juhtub teise lÃµigu teksti suurusega kui muudad html elemendi font-size suurust */
+        }
+        .em h2 {
+            font-size: 2rem;
+        }
+
+            /* muuda teksti suurust siin kasutades em Ã¼hikuid ja vaata, mis muutub */
+        .em {
+            font-size: 2em;
+        }
+        .em h2 {
+            font-size: 1.4em;
+        }
+        .em p {
+            font-size: 0.8em;
+        }
+        
+        /* https://www.w3schools.com/charsets/ref_emoji.asp */
+        @counter-style space-counter {
+            system: cyclic;
+            symbols: "\2705";
+            suffix: " ";
+        }
+        @counter-style clover {
+            system: cyclic;
+            symbols: "\2705";
+            suffix: " ";
+        }
+        @counter-style illar {
+            system: cyclic;
+            symbols: "\274C";
+            suffix: " ";
+        }
+        li {
+            text-align: left;
+            list-style-type: space-counter;
+        }
+        li.illar {
+            text-align: left;
+            list-style-type: illar;
+        }
+        .paketid {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+            border-color: #B5F1C6;
+        }
+        .pakett {
+            background: white;
+            border: 4px solid #ddd;
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            border-color: #B5F1C6;
+            text-align: center;
+            height: 647px;
+            top: 14px;
+            left: 107px;
+        }
+        .button {
+            border: 4px solid black;
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+        .button2 {
+            border: 4px solid black;
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #408EF7;
+        }
+        .price {
+            position: relative;
+        }       
+
+
+
+        .price-number {
+            font-size: 3em;  
+            font-weight: bold;
+            vertical-align: top;
+        }
+        .currency {
+            font-size: 0.8em;  
+            position: absolute;
+            top: 0;  
+            right: 0;  
+        }
+    </style>
+</head>
+<body>
+    <div>
+    
+    <div class="paketid">
+        <div class="pakett business">
+            <br>
+            <br>
+            <h3>Starter</h3>
+            <p><span style="color: gray;">esimene aasta</span> -50%</p>
+            <div class="price">
+
+                <span class="price-number">3,67</span>
+
+                <span class="currency">€+KM/kuu</span>
+
+            </div>
+        <p><span style="color: gray;">norm. <s>7.34 €+KM</s></span></p>
+
+            <ul>
+                <li>16 GB</li>
+                <li>Privaatne postkast</li>
+                <li class=illar>Oma IP aadress</li>
+            </ul>
+            <p><span style="color: gray;">See pakett sobib hästi kui alustad oma esimese kodulehe tegemist ning soovid ennast internetis nähtavaks teha</span></p>
+            <br>
+            <a href="" class="button">Telli</a>
+            <p><strong>30-päevane raha tagasi garantii</strong></p>
+            <p><span style="color: gray;">Kehtib ainult veebimajutuse baaspaketile</span></p>
+        </div>
+        <div class="pakett business">
+            
+                <h4>👍KÕIGE POPULAARSEM</h4>
+                <h3>Business</h3>
+                <p><span style="color: gray;">esimene aasta</span> -50%</p>
+                <div class="price">
+
+                    <span class="price-number">6,47</span>
+    
+                    <span class="currency">€+KM/kuu</span>
+    
+                </div>
+                <p><span style="color: gray;">norm. <s>12,94 €+KM</s></span></p>
+                <ul>
+                    <li>24 GB</li>
+                    <li>Privaatne postkast</li>
+                    <li>Oma IP aadress</li>
+                </ul>
+                <p><span style="color: gray;">Kindel valik kasvava e-äri püstihoidmiseks, suurem maht veebile ja e-postile ning rohkem samaaegseid veebikülastajaid</span></p>
+            
+                <div>
+            <a href="" class="button2"><span style="color: white;">Telli</span></a>
+            </div>
+            <p><strong>30-päevane raha tagasi garantii</strong></p>
+            <p><span style="color: gray;">Kehtib ainult veebimajutuse baaspaketile</span></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
