@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+</head>
+
+<body>
+
+    <table style="width: 50%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+          <th colspan="2" style="text-align: center; padding: 1.5rem 1rem; background-color: #000; color: #fff;">Uudiskiri</th>
+        </tr>
+        <tr>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">Teine pealkiri</td>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">Kolmas pealkiri</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiqe sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</td>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiqe sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">Kolmas pealkiri</td>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">Kolmas pealkiri</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</td>
+            <td style="width: 50%; padding: 1rem; border: 1px solid #000;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; padding: 1rem; background-color: #c8cfdb; color: #000;">
+                <strong>NELJAS PEALKIRI</strong><br> At vero eos et accusamus et iusto odio dignissimos ducimus
+                qui blanditiis praesentium.
+                <br>
+                <button style="padding: 0.5rem; margin-top: 1rem; background-color: #4684f0; color: #fff; border: none;">LINK</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
