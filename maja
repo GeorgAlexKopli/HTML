@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <div class="raam">
+    <svg width="800px" height="800px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  
+        <defs>
+          <linearGradient id="myLinearGradient1"
+                          x1="0%" y1="0%"
+                          x2="0%" y2="100%"
+                          spreadMethod="pad"
+                          gradientTransform="rotate(45)"
+          >
+            <stop offset="0%"   stop-color="#1cabad" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#006600" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+
+        <rect x="0" y="0" height="350" width="2000"
+           style="fill:url(#myLinearGradient1);
+            stroke: #207a4d;
+            stroke-width: 3;" />
+        
+           <rect x="0" y="350" height="350" width="2000"
+           style="stroke:#006600; fill: #148516"/>
+   
+    <rect x="340" y="220" height="70" width="30" style="fill: #353435"></rect>
+
+    <circle cx="60" cy="60" r="40"
+    style="stroke:#a37023;
+           stroke-width: 3;
+           stroke-dasharray: 10 5;
+           fill:#dbdf15">
+           <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="20s"
+            type="rotate"
+            from="0 60 60"
+            to="360 60 60"
+            repeatCount="indefinite"
+        />
+       </circle>
+
+      <!-- points="x,y x,y ..."  -->
+      <polyline id="katus" points="300,300 400,200 500,300"></polyline>
+
+      <rect x="325" y="300" height="100" width="150"></rect>
+      
+
+    
+
+    <rect x="420" y="319" height="80" width="40" style="stroke:#006600; fill: #854714"></rect>
+
+
+    <rect x="350" y="320" height="50" width="50" rx="5" ry="5" style="stroke:#006600; fill: #0377fc"></rect>
+
+      <circle cx="427" cy="355" r="5" style="stroke: none;
+    fill:#414141"></circle>
+    
+    </svg>
+  </div>
+  </body>
+</html>
