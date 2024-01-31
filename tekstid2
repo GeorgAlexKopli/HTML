@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekstid 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.typekit.net/bea7cps.css">
+        <style>
+        .esimene-font {
+            color: rgb(88, 94, 70);
+            font-family: "fantasy" , Copperplate;;
+            text-decoration: wavy underline;
+        }
+        .teine-font {
+            color: rgb(37, 134, 69);
+            font-family: 'Mooli', sans-serif;;
+            text-decoration: underline;
+        }
+        .kolmas-font {
+            color: brown;
+            font-family: "tt-nooks", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="vormindamata">
+        <h1>Teksti vormindamine 2 - fontide kasutamine ja 端hikud</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit id eius nostrum neque laudantium
+            voluptatibus inventore.</p>
+    </div>
+    <div class="columns">
+        <div class="esimene-font">
+            <h2>Fantasy Copperplate</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit id eius nostrum neque laudantium
+                voluptatibus inventore. Molestiae aperiam odit, similique tempora, iure voluptates aspernatur, et harum
+                corporis in molestias sapiente?</p>
+            <a href="https://www.cssfontstack.com/Copperplate">kasutatud font</a>
+        </div>
+        <div class="teine-font">
+            <h2>mooli</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit id eius nostrum neque laudantium
+                voluptatibus inventore. Molestiae aperiam odit, similique tempora, iure voluptates aspernatur, et harum
+                corporis in molestias sapiente?</p>
+            <a href="https://fonts.google.com/specimen/Mooli">kasutatud font</a>
+        </div>
+        <div class="kolmas-font">
+            <h2>TT nooks</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit id eius nostrum neque laudantium
+                voluptatibus inventore. Molestiae aperiam odit, similique tempora, iure voluptates aspernatur, et harum
+                corporis in molestias sapiente?</p>
+            <a href="https://fonts.adobe.com/fonts/tt-nooks#fonts-section">kasutatud font</a>
+        </div>
+    </div>
+</body>
+</html>
