@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @media (min-width: 980px) {
+ 
+    }
+
+/* labelid 체ksteise all */
+    @media (max-width: 979px) {
+        body {
+            margin: 0;
+            background-color:red
+        }
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      border: 2px solid rgb(0, 110, 255);
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-example {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-row {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: rgb(0, 110, 255);
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005aa5;
+    }
+  </style>
+  <title>Skaleeruv vorm</title>
+</head>
+
+<body>
+  <h1>Skaleeruv vorm</h1>
+  <form action="" method="get" class="form-example">
+    <div class="form-row">
+      <label for="name">Sinu nimi:</label>
+      <input type="text" name="name" id="name" placeholder="Sinu nimi" required>
+    </div>
+
+    <div class="form-row">
+      <label for="email">Sinu e-mail:</label>
+      <input type="email" name="email" id="email" placeholder="Sinu email" required>
+    </div>
+
+    <div class="form-row">
+      <label for="b-day">Sinu s체nnikuup채ev:</label>
+      <input type="date" id="b-day" name="b-day" value="2018-07-22" min="1991-01-02" max="2021-12-31">
+    </div>
+
+    <div class="form-row">
+      <label for="phone">Sinu tel number:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-row">
+      <label for="story">Kirjuta endast:</label>
+      <textarea id="story" name="story" placeholder="..." rows="5" cols="33"></textarea>
+    </div>
+
+    <div class="form-row">
+      <input type="submit" value="Saada">
+    </div>
+  </form>
+</body>
+
+</html>
